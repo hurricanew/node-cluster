@@ -10,3 +10,7 @@ http
   .listen(8080,()=>{
     console.log(`started process ${pid}`);
   }); //the server object listens on port 8080
+process.on('message',(msg)=>{
+  console.log(`message from master ${msg}`)
+
+})
