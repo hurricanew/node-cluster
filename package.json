@@ -2,10 +2,10 @@
   "name": "node-sandbox",
   "version": "1.0.0",
   "description": "Simple Node Sandbox",
-  "main": "src/index.js",
+  "main": "src/cluster.js",
   "scripts": {
-    "start": "nodemon src/index.js localhost 8080",
-    "loadtest": "loadtest -n 10 -c 2 http://localhost:8080"
+    "start": "nodemon src/cluster.js localhost 8080",
+    "loadtest": "loadtest -c 10 --rps 10 -t 10 http://localhost:8080"
   },
   "dependencies": {
     "loadtest": "3.0.7"
